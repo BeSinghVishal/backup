@@ -8,12 +8,12 @@ import { Media } from 'reactstrap'
 import { Card, CardImg, CardImgOverlay, CardText, CardBody,
     CardTitle } from 'reactstrap';
 
-function Showcard(props){
-const menu = props.dish.map((dish) => {
+function Showcard({dish}){
+const menu = dish.map((dish) => {
             return (
               <div  className="col-12 col-md-5 m-1">
-                <Card key={dish.id}
-                  onClick={() => props.onClick(dish.id)}>
+                <Card key={dish.id}>
+                {/* //   onClick={() => props.onClick(dish.id)} */}
                   <CardImg width="100%" src={dish.image} alt={dish.name} />
                   <CardImgOverlay>
                       <CardTitle>{dish.name}</CardTitle>
@@ -33,18 +33,12 @@ const menu = props.dish.map((dish) => {
 }
 
 
-function MenuComponent (props) {
-
-    
-
-
-    
-
-   
-        
+function MenuComponent ({dish}) {
+ 
 
         return (
-            <Showcard dish={props.dish} onClick={props.onClick}/>
+            <Showcard dish={dish} />
+            // onClick={props.onClick}
         );
     
 }

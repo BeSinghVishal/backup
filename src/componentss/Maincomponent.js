@@ -11,15 +11,7 @@ import Home from './Home';
 
 
 
-class Main extends Component {
-  constructor(props)
-  {
-super(props);
-this.state={
-  // diss:dishes,
-selectedDish: dishes
-};
-  }
+function Main () {
 
 //   renderDish(id) {
 //         this.setState({
@@ -44,9 +36,9 @@ selectedDish: dishes
     //  }
     // }
 
-    render(){
+
   return (
-    <div >
+    <>
 
       {/* <Navbar dark color="primary">
         <div className="container">
@@ -63,15 +55,12 @@ selectedDish: dishes
 <Redirect to="/home"/>
        </Switch>
     <Footer/>
-    </div>
-      
-
- 
+    </>
  
   );
   
 }
-}
+
 export default Main;
 
 
