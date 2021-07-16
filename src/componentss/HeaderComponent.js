@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Jumbotron } from 'reactstrap';
-
+import { Navbar, NavbarBrand, Jumbotron,Nav,NavItem } from 'reactstrap';
+import {Link} from'react-router-dom'
+import'./HeaderComponents.css'
 class Header extends Component {
   render() {
     return(
@@ -8,6 +9,14 @@ class Header extends Component {
       <Navbar dark>
         <div className="container">
             <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
+         <Nav>
+        <NavItem>
+          <Link className="lnk" to="/menu">Menu</Link>
+        </NavItem>
+        <NavItem>
+          <Link className="lnk" to="/home">Home</Link>
+        </NavItem>
+        </Nav>
         </div>
       </Navbar>
       <Jumbotron>

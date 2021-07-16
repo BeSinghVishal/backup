@@ -13,11 +13,14 @@ const menu = dish.map((dish) => {
             return (
               <div  className="col-12 col-md-5 m-1">
                 <Card key={dish.id}>
+                    <CardTitle tag="h5">{dish.name}</CardTitle>
                 {/* //   onClick={() => props.onClick(dish.id)} */}
-                  <CardImg width="100%" src={dish.image} alt={dish.name} />
-                  <CardImgOverlay>
+                  <CardImg width="60%" src={dish.image} alt={dish.name} />
+                  <CardBody>
                       <CardTitle>{dish.name}</CardTitle>
-                  </CardImgOverlay>
+                      <CardText>{dish.description}
+                      </CardText>
+                  </CardBody>
                 </Card>
               </div>
             );
